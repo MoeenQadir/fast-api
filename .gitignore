@@ -135,3 +135,9 @@ database.db
 # test.yml
 .venv/
 test.js
+.vercel
+.env*
+
+# FastAPI lib/ ignores parent dir; un-ignore the Next.js frontend lib
+!frontend/src/lib/
+!frontend/src/lib/utils.ts
