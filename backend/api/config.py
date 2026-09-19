@@ -14,9 +14,9 @@ def load_env():
 
 class Settings(BaseSettings):
     PROJECT_NAME: str = (
-        f"FastAPI Server - {os.getenv('ENV', 'development').capitalize()}"
+        f"CivicHub API - {os.getenv('ENV', 'development').capitalize()}"
     )
-    DESCRIPTION: str = "FastAPI + Nextjs Example"
+    DESCRIPTION: str = "CivicHub — Town & People Data Management Platform"
     ENV: Literal["development", "staging", "production"] = "development"
     VERSION: str = "0.1"
     SECRET_KEY: str = secrets.token_urlsafe(32)

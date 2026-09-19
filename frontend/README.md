@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MetroPulse — City & People Data Platform
+
+A modern urban data dashboard for managing **cities** and **people**, built with **Next.js 14**, **TypeScript**, **Tailwind CSS** and a **FastAPI** backend.
+
+Live demo: [https://metropulse.vercel.app](https://metropulse.vercel.app)
+
+## Features
+
+- Dark, brand-driven dashboard UI with a violet/fuchsia identity
+- Live city & people data from a FastAPI API (`NEXT_PUBLIC_API_URL`)
+- Graceful fallback to a bundled demo dataset when the API is unreachable — runs perfectly on Vercel
+- Responsive navigation, hero with stats, feature highlights and a contact section with email/phone/location
+- Custom theme, brand icon and metadata for SEO
+
+## Contact
+
+- Email: [myselfxdeveloper@gmail.com](mailto:myselfxdeveloper@gmail.com)
+- Phone / WhatsApp: [+92 344 1586424](tel:+923441586424)
+- Location: Multan, Punjab, Pakistan
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configure the API
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Optional. Copy `.env.example` to `.env.local` and set:
 
-## Learn More
+```
+NEXT_PUBLIC_API_URL=https://your-api.example.com
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+When unset, the app shows demo data so it always renders without errors.
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Then import the repository on [Vercel](https://vercel.com/new). Set the **Root Directory** to `frontend`, and Vercel auto-detects the Next.js project. The suggested production domain is:
+
+```
+https://metropulse.vercel.app
+```

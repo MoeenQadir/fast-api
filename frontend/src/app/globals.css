@@ -3,25 +3,45 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #0d0a20;
+  color: #e2e8f0;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background-color: rgba(232, 121, 249, 0.35);
+  color: #f8fafc;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070511;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3a2f6b;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7c3aed;
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+  }
 }
